@@ -1,0 +1,13 @@
+﻿{
+    "Images": [
+        "png",
+        "jpg",
+        "JPG"
+    ],
+    "Music": [
+        "mp3"
+    ],
+    "Txts": [
+    	"txt"
+    ]
+}
