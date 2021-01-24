@@ -1,39 +1,42 @@
 from . import message
-from os.path import join, isfile
-import os
+from os.path import join, isfile, exists
+from os import replace, makedirs, listdir
 
 
 class Files:
 
     def __init__(self, name, from_dir):
         self.name = name
-        self.format = name.split('.')[-1]
+        self.ext = ext(name)
         self.from_dir = from_dir
 
     def move(self, to_dir, path):
-        if not os.path.exists(join(path, to_dir)):
+        if not exists(join(path, to_dir)):
             message.making_dir(path, to_dir)
-            os.makedirs(join(path, to_dir), exist_ok=True)
+            makedirs(join(path, to_dir), exist_ok=True)
         message.auto_log(self.name, self.from_dir, path, to_dir)
-        os.replace(self.from_dir, join(path, to_dir, self.name))
+        replace(self.from_dir, join(path, to_dir, self.name))
         return True
 
 
-def scanning_files(scan_dir):
-    message.run("Scanning directory...")
-    exceptions_list = ["desktop.ini"]
+def ext(name):
+    return name.split('.')[-1]
+
+
+def scanning_files(scan_dir, exception_list):
+    message.run("Scanning directory")
     try:
-        files_list = []
+        file_list = []
         for path in scan_dir:
-            dir_list = os.listdir(path)
-            for (i, file) in enumerate(dir_list):
-                if (isfile(join(path, file)) and
-                   not (file in exceptions_list)):
-                    files_list.append(Files(file, join(path, file)))
-        if len(files_list) == 0:
+            dir_list = listdir(path)
+            for obj in dir_list:
+                if (isfile(join(path, obj)) and
+                        not ext(obj) in exception_list):
+                    file_list.append(Files(obj, join(path, obj)))
+        if len(file_list) == 0:
             message.info("No files founded")
             message.end()
-        return files_list
+        return file_list
     except FileNotFoundError:
         message.bad("Directory not founded")
         message.end()

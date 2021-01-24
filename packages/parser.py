@@ -1,5 +1,5 @@
-from . import message
 import json
+from . import message
 
 
 def read_config():
@@ -34,7 +34,8 @@ def read_settings():
             settings = json.load(read_file)
         path = scrap(settings, "Path")
         scan_dir = scrap(settings, "Scanning directories")
-        return path, scan_dir
+        exceptions = scrap(settings, "Exceptions")
+        return path, scan_dir, exceptions
     except FileNotFoundError:
         message.info("Config not found")
         if message.question("Create default settings file? (y/n): "):
