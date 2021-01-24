@@ -1,6 +1,6 @@
 # Sorter
 This programs can help you to sort files. It is controlled by `config.json` and `settings.json` files.
-## Configuration
+## Configuration file
 ```json
 {
     "Images": [
@@ -16,27 +16,17 @@ This programs can help you to sort files. It is controlled by `config.json` and 
     ]
 }
 ```
-## Configuration
+This file contains folder names into which the files with certain extentions are sorted. For example, folder ```Music``` will contain .mp3 files and so on. If folder doesn`t exist, it will be created automatically.
+## Settings file
 ```json
 {
-    "Images": [
-        "png",
-        "jpg",
-        "JPG"
-    ],
-    "Music": [
-        "mp3"
-    ],
-    "Text": [
-    	"txt"
+    "Path": "D:/Desktop/Sorted files",
+    "Scanning directories": [
+        "D:/Desktop"
     ]
 }
 ```
 JSON dictionary where 
->```#Path``` - directory for a new folders 
+>```#Path``` - directory for a new (sorted) folders 
 
 >```#Scanning directories```  - folders to be scanned
-
-Then there is a folder name witch contain files with the required extension.
->
-For example, folder ```Music``` will contain .mp3 files and so on. If there is do folder, program will automatically create new folder.
