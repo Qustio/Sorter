@@ -1,6 +1,6 @@
-import message
-import parser
-import files
+from packages import message
+from packages import parser
+from packages import files
 
 
 def main():

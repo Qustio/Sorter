@@ -1,5 +1,5 @@
+from . import message
 import json
-import message
 
 
 def read_config():

@@ -1,4 +1,4 @@
-import message
+from . import message
 from os.path import join, isfile
 import os
 
