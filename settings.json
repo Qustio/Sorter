@@ -1,6 +1,5 @@
-﻿{
-    "Auto mode": false,
-    "Path": "D:/Desktop",
+{
+    "Path": "D:/Desktop/Sorted files",
     "Scanning directories": [
         "D:/Desktop"
     ]

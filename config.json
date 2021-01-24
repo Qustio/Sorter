@@ -1,4 +1,4 @@
-﻿{
+{
     "Images": [
         "png",
         "jpg",
@@ -7,7 +7,7 @@
     "Music": [
         "mp3"
     ],
-    "Txts": [
-    	"txt"
+    "Text": [
+        "txt"
     ]
 }

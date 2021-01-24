@@ -1,13 +1,8 @@
 # Sorter
-This programs can help you to sort files. You can control everything with a `config.json` file.
+This programs can help you to sort files. It is controlled by `config.json` and `settings.json` files.
 ## Configuration
 ```json
 {
-    "#Path": "D:/",
-    "#Scanning directories": [
-        "D:/",
-        "D:/Downloads"
-    ],
     "Images": [
         "png",
         "jpg",
@@ -16,8 +11,24 @@ This programs can help you to sort files. You can control everything with a `con
     "Music": [
         "mp3"
     ],
-    "Images/Icons": [
-        "ico"
+    "Text": [
+    	"txt"
+    ]
+}
+```
+## Configuration
+```json
+{
+    "Images": [
+        "png",
+        "jpg",
+        "JPG"
+    ],
+    "Music": [
+        "mp3"
+    ],
+    "Text": [
+    	"txt"
     ]
 }
 ```
