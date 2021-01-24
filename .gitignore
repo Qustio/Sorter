@@ -2,3 +2,4 @@ venv
 .vscode
 Sorter.bat
 config.json
+__pycache__
