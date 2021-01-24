@@ -1,6 +1,6 @@
 import huepy
 import time
-from os.path import join as join
+from os.path import join
 
 
 def making_dir(path, to_dir):
