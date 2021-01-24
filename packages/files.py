@@ -14,8 +14,8 @@ class Files:
         if not exists(join(path, to_dir)):
             message.making_dir(path, to_dir)
             makedirs(join(path, to_dir), exist_ok=True)
-        message.auto_log(self.name, self.from_dir, path, to_dir)
-        replace(self.from_dir, join(path, to_dir, self.name))
+        message.auto_log(self.name, self.from_dir, join(path, to_dir))
+        replace(join(self.from_dir, self.name), join(path, to_dir, self.name))
         return True
 
 
@@ -32,7 +32,7 @@ def scanning_files(scan_dir, exception_list):
             for obj in dir_list:
                 if (isfile(join(path, obj)) and
                         not ext(obj) in exception_list):
-                    file_list.append(Files(obj, join(path, obj)))
+                    file_list.append(Files(obj, path))
         if len(file_list) == 0:
             message.info("No files founded")
             message.end()

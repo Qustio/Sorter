@@ -9,11 +9,11 @@ def making_dir(path, to_dir):
         .replace('\\', '/'))
 
 
-def auto_log(name, from_dir, path, to_dir):
+def auto_log(name, from_dir, to_dir):
     run('{} from {} to {}'
         .format(huepy.green(name),
                 huepy.blue(from_dir),
-                huepy.blue(join(path, to_dir)))
+                huepy.blue(to_dir))
         .replace('\\', '/'))
 
 

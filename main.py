@@ -20,7 +20,7 @@ def main():
         message.bad("Error while moving files")
         message.end()
     message.info("%d files moved" % count)
-    message.good("My work is done!")
+    message.good("Done!")
     message.end()
 
 
