@@ -4,3 +4,5 @@ Sorter.bat
 config.json
 setting.json
 __pycache__
+dist
+build

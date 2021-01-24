@@ -44,6 +44,10 @@ def read_settings():
                             "Path": "D:\\Desktop\\Sorted files",
                             "Scanning directories": [
                                 "D:\\Desktop",
+                            ],
+                            "Exceptions": [
+                                "ini",
+                                "lnk"
                             ]
                           },
                           write_file,

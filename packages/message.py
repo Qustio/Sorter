@@ -1,5 +1,6 @@
 import huepy
 from os.path import join
+from sys import exit
 
 
 def making_dir(path, to_dir):
@@ -40,5 +41,4 @@ def bad(text):
 
 
 def end():
-    input()
-    quit()
+    exit()
