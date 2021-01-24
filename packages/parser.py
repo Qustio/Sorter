@@ -6,13 +6,13 @@ def read_config():
     message.run("Reading configuration")
     config_name = "config.json"
     try:
-        with open(config_name, 'r') as read_file:
+        with open(config_name, 'r', encoding="utf-8") as read_file:
             config = json.load(read_file)
         return config
     except FileNotFoundError:
         message.info("Config not found")
         if message.question("Create default config file? (y/n): "):
-            with open(config_name, 'x') as write_file:
+            with open(config_name, 'x', encoding="utf-8") as write_file:
                 json.dump({
                             "Images": ["png", "jpg", "JPG"],
                             "Music": ["mp3"],
@@ -30,7 +30,7 @@ def read_settings():
     message.run("Reading settings")
     settings_name = "settings.json"
     try:
-        with open(settings_name, 'r') as read_file:
+        with open(settings_name, 'r', encoding="utf-8") as read_file:
             settings = json.load(read_file)
         path = scrap(settings, "Path")
         scan_dir = scrap(settings, "Scanning directories")
@@ -39,7 +39,7 @@ def read_settings():
     except FileNotFoundError:
         message.info("Config not found")
         if message.question("Create default settings file? (y/n): "):
-            with open(settings_name, 'x') as write_file:
+            with open(settings_name, 'x', encoding="utf-8") as write_file:
                 json.dump({
                             "Path": "D:\\Desktop\\Sorted files",
                             "Scanning directories": [
