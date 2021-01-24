@@ -23,6 +23,10 @@ This file contains folder names into which the files with certain extentions are
     "Path": "D:/Desktop/Sorted files",
     "Scanning directories": [
         "D:/Desktop"
+    ],
+    "Exceptions": [
+        "ini",
+        "lnk"
     ]
 }
 ```
