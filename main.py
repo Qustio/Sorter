@@ -7,7 +7,7 @@ def main():
     config = parser.read_config()
     path, scan_dir, exceptions = parser.read_settings()
     files_list = files.scanning_files(scan_dir, exceptions)
-    message.info("%d files founded" % len(files_list))
+    message.info("%d files found" % len(files_list))
     message.run("Moving files:")
     try:
         count = 0
